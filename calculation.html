@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styletax.css">
+    <title>Tax calculator </title>
+</head>
+<script>
+    function mult(value) {
+        var x, y, a, b, c, d;
+        x = value;
+        y = 5 / 100 * x;
+        a = x - y;
+        b = x * 12;
+        c = y * 12
+        d = b + c;
+        //     if(x<0 && x>100000)
+        // {
+        //     y=5/100*x;
+        //     return y;
+        // }
+        // else if (x<=100000 && x>200000)
+        // {
+        //     y=10/100*x;
+        //     return y;
+        // }
+        // else if (x<200000 )
+        // {
+        //     y=20/100*x;
+        //     return y;
+        // } 
+        document.getElementById('monthly-income').value = x;
+        document.getElementById('monthly-tax').value = y;
+        document.getElementById('salary-after-tax').value = a;
+        document.getElementById('yearly-income').value = b;
+        document.getElementById('yearly-tax').value = c;
+        document.getElementById('yearly-after-tax').value = d;
+    }
+</script>
+
+<body>
+    <div class="income">
+        <h1>Tax Calculator</h1>
+        <form action="">
+            <div class="form-group">
+                <label for=""></label>
+                <input type="text " name="" placeholder="your salary" onkeyup="mult(this.value);">
+            </div>
+            <div class="form-group">
+                <label for="">monthly-income</label>
+                <input type="text " id="monthly-income" placeholder="00">
+            </div>
+            <div class="form-group">
+                <label for="">Monthly tax</label>
+                <input type="text " id="monthly-tax" placeholder="00">
+            </div>
+            <div class="form-group">
+                <label for="">Salary after tax</label>
+                <input type="text " id="salary-after-tax" placeholder="00">
+            </div>
+            <div class="form-group">
+                <label for="">Yearly income</label>
+                <input type="text " id="yearly-income" placeholder="00">
+            </div>
+            <div class="form-group">
+                <label for="">Yearly tax</label>
+                <input type="text " id="yearly-tax" placeholder="00">
+            </div>
+            <div class="form-group">
+                <label for="">Yearly income after tax</label>
+                <input type="text " id="yearly-after-tax" placeholder="00">
+            </div>
+        </form>
+    </div>
+</body>
+
